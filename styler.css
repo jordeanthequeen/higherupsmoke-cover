@@ -101,7 +101,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: url('/bg.png') center center / cover no-repeat fixed;
+    background: url('bg.png') center center / cover no-repeat fixed;
     filter: blur(4px);
     z-index: 0;
   }
@@ -123,7 +123,7 @@
   .lander .cutout {
     position: absolute;
     inset: 0;
-    background: url('/cutout.png') center center / cover no-repeat;
+    background: url('cutout.png') center center / cover no-repeat;
     z-index: 2;
     pointer-events: none;
   }
