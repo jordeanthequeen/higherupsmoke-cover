@@ -82,6 +82,14 @@ h2 {
   z-index: -1;
 }
 
+@media screen and (max-width: 768px) {
+  .parallax-bg {
+    background-attachment: scroll; /* Remove fixed attachment on mobile */
+    background-size: cover; /* Ensure image covers entire screen */
+    background-position: center center; /* Center the background */
+  }
+}
+
 .parallax-bg::before {
   content: '';
   position: absolute;
