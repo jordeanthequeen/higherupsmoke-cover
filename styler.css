@@ -14,7 +14,6 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
 }
 
 body {
@@ -25,15 +24,38 @@ body {
   overflow-x: hidden;
 }
 
-h2{color: var(--primary-color); margin-bottom: 1rem; font-size: 2.5rem;}
+h2 {
+  color: var(--primary-color); 
+  margin-bottom: 1rem; 
+  font-size: 2.5rem;
+}
 
-/* Snap Scroll Sections */
-section {
-  scroll-snap-align: start;
-  height: 100vh;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
+/* Desktop Snap Scroll */
+@media screen and (min-width: 769px) {
+  html {
+    scroll-snap-type: y mandatory;
+  }
+
+  section {
+    scroll-snap-align: start;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+/* Mobile Adjustments */
+@media screen and (max-width: 768px) {
+  section {
+    height: auto;
+    min-height: 100vh;
+    padding: 20px 0;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
 }
 
 /* Parallax Header */
@@ -98,10 +120,24 @@ section {
   filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
 }
 
+@media screen and (max-width: 768px) {
+  .header-logo {
+    max-width: 250px;
+  }
+}
+
 .cta-buttons {
   display: flex;
   justify-content: center;
   gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
 }
 
 .btn {
@@ -155,6 +191,12 @@ section {
   list-style: none;
 }
 
+@media screen and (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+  }
+}
+
 .navbar-menu a {
   color: var(--text-color);
   text-decoration: none;
@@ -187,23 +229,13 @@ section {
 
 @media (max-width: 1024px) {
   .product-grid {
-      grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
   .product-grid {
-      grid-template-columns: 1fr;
-  }
-  .header-logo {
-      max-width: 250px;
-  }
-  .cta-buttons {
-      flex-direction: column;
-      align-items: center;
-  }
-  .navbar-menu {
-      display: none;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -237,12 +269,16 @@ section {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0 20px;
+  padding: 50px 20px;
 }
 
 .about-content {
   max-width: 800px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px; 
 }
 
 .about-photo {
@@ -254,6 +290,24 @@ section {
   background-size: cover;
   background-position: center;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 768px) {
+  .about-section {
+    padding: 30px 0; /* Reduced horizontal padding */
+  }
+
+  .about-content {
+    padding: 0 15px; /* Ensure text doesn't touch screen edges */
+    text-align: center;
+    width: 100%; /* Full width */
+  }
+
+  .about-section p {
+    max-width: 100%; /* Ensure paragraphs don't overflow */
+    word-wrap: break-word; /* Break long words */
+    overflow-wrap: break-word; /* Alternative for word-wrap */
+  }
 }
 
 .about-section h2 {
