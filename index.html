@@ -3,106 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher Up Smoke Shop</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="styler.css">
-    <title>Jordan Badovinac - Our New Web Dev</title>
 </head>
 <body>
-    <!-- Landing -->
-    <header>
-        <!-- Navbar -->
-        <nav class="navbar">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">Higher Up</div>
             <ul class="navbar-menu">
-              <li><a href="#" class="active">Home</a></li>
-              <li><a href="#">SALE / CLOSEOUT</a></li>
-              <li class="dropdown">
-                <a href="#">Employment ▾</a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Apply</a></li>
-                  <li><a href="#">FAQs</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Own a Franchise</a></li>
-              <li class="dropdown">
-                <a href="#">Delta 8 / Hemp ▾</a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Edibles</a></li>
-                  <li><a href="#">Cartridges</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#">Nicotine ▾</a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Disposables</a></li>
-                  <li><a href="#">Refillables</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#">Electronics ▾</a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Batteries</a></li>
-                  <li><a href="#">Chargers</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#">Accessories ▾</a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Grinders</a></li>
-                  <li><a href="#">Storage</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Candles / Spray</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#" class="cart-icon">🛒 0 Items</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Featured Products</a></li>
+                <li><a href="#about">Our New Developer</a></li>
             </ul>
-          </nav>              
-    </header>
-    <section class="lander">
-            <div class="cutout"></div>
-            <img src="logo.png" id="lander-logo" class="magic-appear magic-delay-1"/>
-            <!-- Buttons -->
-            <div class="button-holder magic-appear magic-delay-1">
-                <button class="button-1">Shop Nicotine Vapes</button>
-                <button class="button-1">Shop Delta 8 / HEMP</button>
+        </div>
+    </nav>
+
+    <!-- Parallax Header -->
+    <section class="parallax-header" id="home">
+        <div class="parallax-bg"></div>
+        <div class="parallax-cutout"></div>
+        <div class="header-content">
+            <img src="logo.png" alt="Higher Up Smoke Shop" class="header-logo">
+            <div class="cta-buttons">
+                <a href="#products" class="btn">Featured Products</a>
+                <a href="#about" class="btn">Developer Info</a>
             </div>
+        </div>
     </section>
 
-    <section class="about-me">
-        <div class="about-content">
-          
-          <!-- Sidebar: Photo + Contact Info -->
-          <div class="about-sidebar">
-            <div class="about-photo">
-              <img src="https://raw.githubusercontent.com/jordeanthequeen/higherupsmoke-cover/refs/heads/main/badovinacjordanimage.jpg" alt="Photo of Jordan Badovinac" />
+    <!-- Product Showcase -->
+    <section class="product-showcase" id="products">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="Delta_8_Hemp_with_bg.png" alt="Delta 8 & Hemp Product">
+                <h3>Delta 8 & Hemp</h3>
+                <p>Gummies, chill vibes, and a leafy green bear who totally gets you. Welcome to your mellow era.</p>
             </div>
-            <h3 class="about-name">Jordan Badovinac</h3>
-            <div class="contact-info">
-              <p><i class="fas fa-envelope"></i> <a href="mailto:badovinacjordan@gmail.com">badovinacjordan@gmail.com</a></p>
-              <p><i class="fas fa-phone"></i> <a href="tel:7209908540">(720) 990-8540</a></p>
+            <div class="product-card">
+                <img src="Nicotine_with_bg.png" alt="Nicotine Product">
+                <h3>Nicotine</h3>
+                <p>Sleek, smooth, and satisfying—our vapes are basically the James Bond of clouds.</p>
             </div>
-          </div>          
-      
-          <!-- Cover Letter Text -->
-          <div class="about-text">
-            <h2>About Me</h2>
-            <p>
-              I'm a passionate and self-driven web developer with a strong focus on design clarity and user experience. Over the past few years, I’ve taken full ownership of multiple large-scale web projects — from crafting intuitive front-end interfaces to deploying complete digital ecosystems that align with real business goals.
-            </p>
-            <p>
-              I don’t just build websites — I build systems that drive revenue, tell a story, and evolve with the user. I’d love to bring my creativity, technical skills, and genuine enthusiasm for innovation to your team.
-            </p>
-            <p>
-              Let’s build something dope together.
-            </p>
-          </div>
-      
+            <div class="product-card">
+                <img src="Electronics_with_bg.png" alt="Electronics Product">
+                <h3>Electronics</h3>
+                <p>Chargers so powerful, you’ll think they’ve got superpowers. Batteries included (obviously).</p>
+            </div>
+            <div class="product-card">
+                <img src="Accessories_with_bg.png" alt="Accessories Product">
+                <h3>Accessories</h3>
+                <p>Everything but the puff itself. Pipes, lighters, and flair that says, “Yeah, I vibe different.”</p>
+            </div>
+            <div class="product-card">
+                <img src="Fragrance_with_bg.png" alt="Fragrance Product">
+                <h3>Fragrance</h3>
+                <p>Smell like mystery, magic, and maybe a hint of mischief. Scents that spark conversations.</p>
+            </div>
+            <div class="product-card">
+                <img src="Sale_Closeout_with_bg.png" alt="Sale Product">
+                <h3>SALE / Closeout</h3>
+                <p>Alien abductions not included—just out-of-this-world deals before they vanish for good.</p>
+            </div>
         </div>
-      </section>
-      
-      
-      
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="about-content">
+            <div class="about-photo"></div>
+            <h2>Jordan Badovinac</h2>
+            <p>
+                I'm a passionate and self-driven web developer with a strong focus on design clarity and user experience. Over the past few years, I've taken full ownership of multiple large-scale web projects—from crafting intuitive front-end interfaces to deploying complete digital ecosystems that align with real business goals.
+            </p>
+            <p>
+                I don't just build websites—I build systems that drive revenue, tell a story, and evolve with the user. I'd love to bring my creativity, technical skills, and genuine enthusiasm for innovation to your team.
+            </p>
+            <p>
+                Let's build something dope together.
+            </p>
+            <div class="contact-icons">
+                <div><i class="fas fa-envelope contact-icon"></i> badovinacjordan@gmail.com</div>
+                <div><i class="fas fa-phone-alt contact-icon"></i> 720-990-8540</div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
